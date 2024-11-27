@@ -1,0 +1,8 @@
+<label>Filter Profile</label>
+<input name="searchTerm" placeholder="Search profile ..." />
+
+<table>
+  @for (item of profileItems() | filterProfile :searchTerm(); track item.id){
+  <app-profile-item [item]="item" />
+  }
+</table>
